@@ -8,7 +8,7 @@ dp=Dispatcher(bot)
 
 @dp.message_handler(commands=["start"])
 async def send_hi(sms:types.Message):
-    await sms.answer(text=f'Assalawma aleykum {sms.from_user.username}',
+    await sms.answer(text=f'Assalawma aleykum @{sms.from_user.username}',
                      reply_markup=main_menu)
 
 @dp.message_handler(commands=['photo'])
